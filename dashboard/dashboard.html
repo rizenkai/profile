@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+        <section class="stats">
+            <div class="stat-box">
+                <h2>Today's Sales</h2>
+                <p>$850</p>
+                <p>Tax Return: $320</p>
+            </div>
+            <div class="stat-box">
+                <h2>This Week's Sales</h2>
+                <p>$4,625</p>
+                <p>Tax Return: $320</p>
+            </div>
+            <div class="stat-box">
+                <h2>This Month's Sales</h2>
+                <p>$11,908</p>
+                <p>Tax Return: $320</p>
+            </div>
+            <div class="stat-box">
+                <h2>This Year's Sales</h2>
+                <p>$91,239</p>
+                <p>Tax Return: $320</p>
+            </div>
+        </section>
+        
+        <section class="charts">
+            <div class="profile-stats">
+                <h3>Profile Statistics</h3>
+                <p>6,112 views | 102 likes | 343 comments | 960 shares</p>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="pie-chart">
+                <h3>Pie Chart</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </section>
+        
+        <section class="comments">
+            <h3>Messages</h3>
+            <div class="comment-box">
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <input type="text" id="commentInput" placeholder="Add a comment">
+                <button onclick="addComment()">Post</button>
+            </div>
+            <ul id="commentList"></ul>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

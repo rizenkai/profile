@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen's Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sign In Form -->
+    <div class="window" id="sign-in-form">
+        <div class="title-bar">
+            <span>Sign in</span>
+            <a href="/index.html"><button class="close-button">X</button></a>
+        </div>
+        <form class="form">
+            <label>Email:</label>
+            <input type="email" placeholder="unpamkeren@gmail.com">
+            <label>Password:</label>
+            <input type="password" placeholder="••••••••">
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Remember Me</label>
+                <a href="#" onclick="showForgetPassword()">Forgot Password?</a>
+            </div>
+            <div class="button-group">
+                <a href="/index.html"><button type="button">Sign in</button></a>
+                <button type="button" onclick="showSignUp()">Sign up</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="window" id="sign-up-form" style="display: none;">
+        <div class="title-bar">
+            <span>Sign up</span>
+            <button class="close-button" onclick="showSignIn()">X</button>
+        </div>
+        <form class="form">
+            <label>Name:</label>
+            <input type="text" placeholder="Your Name">
+            <label>Email:</label>
+            <input type="email" placeholder="Your Email">
+            <label>Password:</label>
+            <input type="password" placeholder="Your Password">
+            <div class="checkbox-group">
+                <label><input type="checkbox"> I read & Agree to Terms and Conditions</label>
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="showSignIn()">Sign in</button>
+                <button type="button" onclick="showSignIn()">Sign up</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Forget Password Form -->
+    <div class="window" id="forget-password-form" style="display: none;">
+        <div class="title-bar">
+            <span>Forget Password?</span>
+            <button class="close-button" onclick="showSignIn()">X</button>
+        </div>
+        <form class="form">
+            <p>Enter your email below to reset your password:</p>
+            <input type="email" placeholder="unpamkeren@gmail.com">
+            <button type="button" onclick="showSignIn()">Submit</button>
+        </form>
+    </div>
+
+    <script>  
+            function showSignIn() {
+            document.getElementById('sign-in-form').style.display = 'block';
+            document.getElementById('sign-up-form').style.display = 'none';
+            document.getElementById('forget-password-form').style.display = 'none';
+        }
+
+        function showSignUp() {
+            document.getElementById('sign-in-form').style.display = 'none';
+            document.getElementById('sign-up-form').style.display = 'block';
+            document.getElementById('forget-password-form').style.display = 'none';
+        }
+
+        function showForgetPassword() {
+            document.getElementById('sign-in-form').style.display = 'none';
+            document.getElementById('sign-up-form').style.display = 'none';
+            document.getElementById('forget-password-form').style.display = 'block';
+        }
+
+        window.onload = showSignIn;
+    </script>
+</body>
+</html>
