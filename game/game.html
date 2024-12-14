@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Antic+Slab"
+      rel="stylesheet" />
+    <link rel="icon" href="assets/images.png" type="image/icon type" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div>
+      <select id="game-theme" onchange="changeTheme()">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="cold">Cold</option>
+        <option value="neon">Neon</option>
+        <option value="hell">Hell</option>
+        <option value="army">Army</option>
+        <option value="brownie">Brownie</option>
+        <option value="pinky">Pinky</option>
+        <option value="ocean">Deep Ocean</option>
+      </select>
+      <button id="start" onclick="startGame()">Start</button>
+      <button id="pause" onclick="stopGame()" disabled>Pause</button>
+      <button id="reset" onclick="resetGame()" disabled>Reset</button>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div id="controls">
+      <span>Score: <strong id="score">0</strong></span>
+      <span>High Score: <strong id="highScore">0</strong></span>
+    </div>
+
+    <audio id="eat-sound" src="assets/music/eat.mp3"></audio>
+    <audio id="lose-sound" src="assets/music/lose.wav"></audio>
+    <audio id="start-sound" src="assets/music/start.mp3"></audio>
+    <audio id="pause-sound" src="assets/music/pause.mp3"></audio>
+    <audio id="direction-sound" src="assets/music/move.wav"></audio>
+    <audio id="playing-sound" src="assets/music/playing.wav"></audio>
+
+    <!-- Modal -->
+    <div id="gameOverModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="game-over">Game Over</h2>
+        <p id="finalScore" class="final-score"></p>
+        <button onclick="playAgain()">Play Again</button>
+      </div>
+    </div>
+  </body>
+
+  <script src="snake.js"></script>
+</html>
