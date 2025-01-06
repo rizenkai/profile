@@ -143,9 +143,16 @@
             </div>
         </div>
         </div>
-     
+        
         <div class="mt-5 position-relative" >
-            <div style="background-color: transparent;position: absolute;top:-280px;" id="Certificate"> </div>
+          <button class="filter-btn" id="all-btn" data-category="all">All</button>
+          <button class="filter-btn" id="Certificate" data-category="certificate">Certificate</button>
+          <button class="filter-btn" data-category="project">Project</button>
+          <button class="filter-btn" data-category="design">Design</button>
+      </div>
+
+        <div class="mt-5 position-relative" >
+        <div style="background-color: transparent;position: absolute;top:-280px;" data-category="certificate" id="Certificate"> </div>
         <p class="m-0 title" >Certificate </p>
         <div class="row  mt-3">
      
@@ -210,7 +217,7 @@
         </div>
 
         <div class="mt-5 position-relative" >
-          <div style="background-color: transparent;position: absolute;top:-280px;" id="Portfolio"> </div>
+          <div style="background-color: transparent;position: absolute;top:-280px;" data-category="project" id="Portfolio"> </div>
       <p class="m-0 title" >Portfolio</p>
       <div class="row  mt-3">
 
@@ -288,14 +295,14 @@
     </div>
         
       <div class="mt-5 position-relative" >
-            <div style="background-color: transparent;position: absolute;top:-280px;" id="Design"> </div>
+            <div style="background-color: transparent;position: absolute;top:-280px;" data-category="design" id="Design"> </div>
             <p class="m-0 title">Design</p>
             <div class="row  mt-3">
     
     
                 <div class="col-sm-12 col-md-6 col-lg-4 mb-1 ">
                   <div class="mb-4 bordered">
-                    <a href="https://www.instagram.com/p/C6cvwxvpjG6/"><img src="moon.webp" class="card-img rounded-custom" alt="..."></a>
+                    <a href="https://www.instagram.com/p/C6cvwxvpjG6/"><img src="moon.webp" class="card-img rounded-custom" data-category="design" alt="..."></a>
                     <div class="card-body bordered-top">
                       <a class="title-card m-0" href="https://www.instagram.com/p/C6cvwxvpjG6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Moonlight</a> 
                       <p class="text-card my-2 m-0">Moonlight is the soft, silvery glow that illuminates the night, created by sunlight reflecting off the surface of the Moon. As the moon, so beautiful.</p>
@@ -427,6 +434,24 @@
                   </div>
               </div>
             </div>
+            <div class="bordered mt-5 pt-4  px-1 position-relative" >
+              <div style="background-color: transparent;position: absolute;top:-280px;" id="Contact-Me"> </div>
+              <p class="author"> Meet me in here!</p>
+
+              <p class="title">My Location 💬</p>
+              <hr>
+  <!-- Google Maps Embed -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.368631321606!2d106.6915326!3d-6.346287900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5a6e26dc3cd%3A0xccd6344b8021119d!2sPamulang%20University%20Campus%202%20(UNPAM%20Viktor)!5e0!3m2!1sen!2sid!4v1736145119025!5m2!1sen!2sid" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+
+</div>
+</div>
 
                 <!---<div class="bordered mt-5 pt-4  px-1 position-relative" >
                     <div style="background-color: transparent;position: absolute;top:-280px;" id="Contact-Me"> </div>

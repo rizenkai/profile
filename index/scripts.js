@@ -199,3 +199,25 @@ $(document).ready(function() {
     
 });
 
+$('.filter-btn').click(function() {
+  // Remove active class from all buttons
+  $('.filter-btn').removeClass('active');
+  // Add active class to clicked button
+  $(this).addClass('active');
+  
+  const category = $(this).data('category');
+  
+  if (category === 'all') {
+      // Show all items
+      $('.gallery-item').fadeIn();
+  } else {
+      // Hide all items
+      $('.gallery-item').hide();
+      // Show only items with matching category
+      $(`.gallery-item[data-category="${category}"]`).fadeIn();
+  }
+});
+
+// Initialize gallery with all items visible
+$('#all-btn').addClass('active');
+$('.gallery-item').show();
